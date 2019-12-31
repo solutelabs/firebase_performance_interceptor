@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:performance_interceptor/utils.dart';
@@ -28,9 +30,10 @@ class DioPerformanceInterceptor implements InterceptorsWrapper {
   }
 
   Future<void> _setResponse(Response response) async {
-    print('Dio: ${response.toString()}');
-//    metric.responsePayloadSize = data.contentLength;
-//    metric.responseContentType = data.headers['Content-Type'];
+    try {
+      metric.responseContentType =
+          response.headers.map[HttpHeaders.contentTypeHeader].first;
+    } catch (_) {}
     metric.httpResponseCode = response.statusCode;
     await metric.stop();
   }
