@@ -11,7 +11,7 @@ This packages has performance monitor interceptors for [http](https://pub.dev/pa
 ```
 performance_interceptor:
     git:
-      url: git@gitlab.com:milind.mevada/firebase_performance_interceptor.git
+      url: git@github.com:solutelabs/firebase_performance_interceptor.git
 ```
 
 ## Usage
