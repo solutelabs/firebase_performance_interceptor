@@ -12,8 +12,8 @@ dependencies:
     sdk: flutter
   firebase_performance: ^0.3.1+5
 
-  http_interceptor: ^0.1.1
-  dio: ^3.0.8
+  http_interceptor: ">=0.1.1 <2.0.0"
+  dio: ">=3.0.8 <6.0.0"
 
 dev_dependencies:
   flutter_test:
